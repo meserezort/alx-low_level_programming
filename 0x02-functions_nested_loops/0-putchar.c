@@ -5,7 +5,7 @@
  * is written by mesele
  *
  * Return: 0
- * */
+ */
 int main(void)
 {
 	_putchar('_');
@@ -25,6 +25,6 @@ int main(void)
 	_putchar('r');
 
 	_putchar('\n');
-	
-	retun (0);
+
+	return (0);
 }
