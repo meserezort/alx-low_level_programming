@@ -1,1 +1,1 @@
-3-print_numbers.c
+3-main.c
