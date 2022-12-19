@@ -1,23 +1,36 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
+
+#define SUM 2772
+
 /**
- * checksum - executes checksum
- * @s: input char
- * Return: checksum
+ * main - it all starts here
+ *
+ * Return: 0 always success
  */
-unsigned long checksum(char *s)
+int main(void)
 {
-	int pass, sum;
+	int sum = 0, n = 0, i = 0;
+	char str[100];
 
 	srand(time(NULL));
-	sum = 0;
-	while (sum <= 2645)
+	while (sum < SUM)
 	{
-		pass = (rand() % 128);
-		sum += pass;
-		printf("%", pass);
+		if (SUM - sum < 48)
+			sum -= str[--i];
+		else if (SUM - sum <= 126)
+			n = SUM - sum;
+		else
+			n = rand() % (126 - 48) + 48;
+		if (n)
+		{
+			str[i++] = n;
+			sum += n;
+		}
+		n = 0;
 	}
-	printf("%c", 2772 - sum);
+	str[i] = '\0';
+	printf("%s", str);
 	return (0);
 }
