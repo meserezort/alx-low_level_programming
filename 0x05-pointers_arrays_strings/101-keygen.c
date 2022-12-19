@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
 #include <stdlib.h>
 #include <time.h>
 /**
@@ -9,12 +8,16 @@
  */
 unsigned long checksum(char *s)
 {
-	unsigned long sum = 0;
+	int pass, sum;
 
-	while (*s != 0)
+	srand(time(NULL));
+	sum = 0;
+	while (sum <= 2645)
 	{
-		sum += *s;
-		s++;
+		pass = (rand() % 128);
+		sum += pass;
+		printf("%", pass);
 	}
-	return (sum);
+	printf("%c", 2772 - sum);
+	return (0);
 }
