@@ -1,11 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-/**
-* main - it all starts here
-*
-* Return: 0 always success
-*/
 int main(void)
 {
 	int n;
