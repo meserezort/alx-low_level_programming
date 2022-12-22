@@ -1,7 +1,7 @@
 #include "main.h"
 
-/*
- * _strncat - concatenates string with n bytes from another string
+/**
+ * _strncat - mtd name to impliment task 1.
  * @dest: an input string
  * @src: an input string
  * @n: an input integer
