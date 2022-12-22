@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - it all starts here
- *
- * Return: 0 always success
- */
-
+* main - it all starts here
+*
+* Return: 0 always success
+*/
 int main(void)
 {
 	int n;
@@ -14,10 +13,10 @@ int main(void)
 
 	a[2] = 1024;
 	p = &n;
-	/**
-	 * main - the main function
+	/*
 	 * write your line of code here...
 	 * Remember:
+	 * main - magic
 	 * - you are not allowed to use a
 	 *   - you are not allowed to modify p
 	 *   - only one statement
