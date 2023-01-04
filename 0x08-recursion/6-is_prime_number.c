@@ -24,7 +24,7 @@ int prime2(int a, int b)
  * On error, -1 is returned, and errno is set appropriately.
  */
 int is_prime_number(int n)
-{
+{}
 	if (n <= 1)
 		return (0);
 	return (prime2(n, 2));
