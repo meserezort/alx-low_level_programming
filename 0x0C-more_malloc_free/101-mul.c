@@ -76,13 +76,13 @@ char *iterate_zeroes(char *str)
 int get_digit(char c)
 {
 	int digit = c - '0';
-	
+
 	if (digit < 0 || digit > 9)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	
+
 	return (digit);
 }
 
@@ -178,7 +178,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 }
 
 /**
- * n - Multiplies two positive numbers.
+ * main - Multiplies two positive numbers.
  * @argv: The number of arguments passed to the program.
  * @argc: An array of pointers to the arguments.
  *
