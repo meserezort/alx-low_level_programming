@@ -7,6 +7,7 @@
  * @argv: arguments
  * Return: 0 success
  */
+
 int main(int argc, char *argv[])
 {
 	unsigned long mul;
