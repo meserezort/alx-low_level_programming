@@ -12,28 +12,48 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *new;
-	unsigned int i;
-
-	if (ptr == NULL)
-		return (malloc(new_size));
+	char *p;
 
 	if (new_size == old_size)
 		return (ptr);
 
-	if (new_size == 0)
+	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
 
-	new = malloc(new_size);
+	p = malloc(new_size);
 
-	if (new == NULL)
+	if (p == NULL)
 		return (NULL);
 
-	for (i = 0; i < old_size && i < new_size; i++)
-		*((unsigned char *)new + i) = *((unsigned char *)ptr + i);
+	if (ptr == NULL)
+		return (p);
 
-	return (new);
+	p = _memcpy(p, ptr, (new_size > old_size ? old_size : new_size));
+	free(ptr);
+	return (p);
+}
+
+/**
+ * _memcpy - copies the memory are from
+ * src to dest
+ * @dest: The destination pointer
+ * @src: The source pointer
+ *  @n: bytes to use from src
+ *
+ *  Return: The pointer to dest
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	unsigned int i = 0;
+
+	while (i < n)
+	{
+		*(dest + i) = *(src + i);
+		i++;
+	}
+
+	return (dest);
 }
