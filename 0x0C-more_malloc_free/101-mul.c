@@ -10,7 +10,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len);
 
 /**
  * find_len - Finds the length of a string
- *  * @str: The string to be measured.
+ * @str: The string to be measured.
  *
  * Return: The length of the string
  */
@@ -31,7 +31,7 @@ int find_len(char *str)
  *
  * Description: If there is insufficient space, the
  *          function exits with a status of 98.
- *  Return: A pointer to the array.
+ * Return: A pointer to the array.
  */
 char *create_xarray(int size)
 {
@@ -87,7 +87,7 @@ int get_digit(char c)
 }
 
 /**
- * *get_prod - Multiplies a string of numbers by a single digit.
+ * get_prod - Multiplies a string of numbers by a single digit.
  * @prod: The buffer to store the result.
  * @mult: The string of numbers.
  * @digit: The single digit.
