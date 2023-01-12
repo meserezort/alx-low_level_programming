@@ -3,7 +3,7 @@
 
 /**
  * _realloc - Allocates space of `new_size` bytes and moves old data to new
- * space.
+ *               space.
  * @ptr: Pointer to the old memory space
  * @old_size: The size in bytes of the old memory space
  * @new_size: The size in bytes of the new memory space
