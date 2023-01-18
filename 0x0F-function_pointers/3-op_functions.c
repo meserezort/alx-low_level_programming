@@ -21,7 +21,7 @@ int op_sub(int a, int b)
 {
 	return (a - b);
 }
-/**                                                                          
+/**
  * op_mul - 5 functions
  * @a: input one
  * @b: input two
