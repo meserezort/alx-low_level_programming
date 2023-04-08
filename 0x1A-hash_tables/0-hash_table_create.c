@@ -1,3 +1,9 @@
+holbertonschool-low_level_programming/0x1A-hash_tables/0-hash_table_create.c
+ 
+ 
+29 lines (26 sloc)  582 Bytes
+ 
+
 #include "hash_tables.h"
 
 /**
@@ -27,4 +33,3 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 	return (hashtable);
 }
-
