@@ -1,35 +1,28 @@
-holbertonschool-low_level_programming/0x1A-hash_tables/0-hash_table_create.c
- 
- 
-29 lines (26 sloc)  582 Bytes
- 
-
 #include "hash_tables.h"
 
 /**
- * hash_table_create - Create the hash table.
- * @size: Size of the table.
- *
- * Return: The hash table.
- */
+ * hash_table_create - creates a hash table.
+ * @size:  size of the array.
+ * Return: pointer to hash table's new node, or NULL if somethong was wrong.
+ **/
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	unsigned long int i;
-	hash_table_t *hashtable;
+	hash_table_t *new_node = NULL;
 
-	if (size == 0)
+	new_node = malloc(sizeof(hash_table_t));
+	if (!new_node)
 		return (NULL);
-	hashtable = malloc(sizeof(hash_table_t));
-	if (hashtable == NULL)
+
+	new_node->size = size;
+	new_node->array = malloc(sizeof(hash_node_t **) * size);
+	if (!new_node->array)
+	{
+		free(new_node);
 		return (NULL);
-	hashtable->size = size;
-	hashtable->array = malloc(sizeof(hash_node_t *) * size);
-	if (hashtable->array == NULL)
-		return (NULL);
+	}
 
 	for (i = 0; i < size; i++)
-	{
-		hashtable->array[i] = NULL;
-	}
-	return (hashtable);
+		(new_node->array)[i] = NULL;
+	return (new_node);
 }
